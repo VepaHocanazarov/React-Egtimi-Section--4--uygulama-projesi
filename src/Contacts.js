@@ -8,7 +8,7 @@ class Contacts extends Component {
     return (
       <div>
 
-        <List/>
+        <List dizimm = {this.props.dizim} />
         <Form/>
         
       </div>

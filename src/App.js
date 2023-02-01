@@ -1,16 +1,36 @@
-
+import React,{ Component }from "react"
 import './App.css';
 import Contacts from './Contacts';
 
-function App() {
-  return (
-    <div className="App">
+class App extends Component {
 
-    <Contacts/>
+  state = {
+    contacts:[{
+      name:"Vepa",
+      phone:"0555 555 55 55"
+    },
+
+    {
+      name:"Aygul",
+      phone:"0555 555 55 54"
+    }
+  ]
+  };
+
+  render()
+    {
+      return (
+        <div className="App">
     
-    </div>
-  );
-}
+          <Contacts dizim = {this.state.contacts} />
+    
+        </div>
+      );
+    }
+    }
+  
+
+
 
 export default App;
 

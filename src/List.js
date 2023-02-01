@@ -1,36 +1,37 @@
 import React, { Component } from 'react'
 import "./List.css";
+import  PropTypes from 'prop-types';
 
- class List extends Component {
+class List extends Component {
+
+  // static propTypes={
+  //   dizim:PropTypes.array.isRequired
+  // }
   render() {
     return (
       <div className='ListArea'>
-        <input name = "filter" id='filter' placeholder= {"Filter by name or phone"} />
+        <input name="filter" id='filter' placeholder={"Filter by name or phone"} />
         <ul className='list'>
-            <li>
-              <span className='name'>Vepa Hocanazarov</span>
-              <span className='phone'>0555 555 55 55</span>
-              <span className='clearfix'></span>
-            </li>
 
-            <li>
-              <span className='name'>Aygul Cakanova</span>
-              <span className='phone'>0555 555 55 55</span>
-              <span className='clearfix'></span>
-            </li>
+          {
+            this.props.dizimm.map(diziler =>
 
-            <li>
-              <span className='name'>Serdar Gurbanov</span>
-              <span className='phone'>0555 555 55 55</span>
-              <span className='clearfix'></span>
-            </li>
+              <li key = {diziler.name} >
+                <span className='name'>{diziler.name}</span>
+                <span className='phone'>{diziler.phone}</span>
+                <span className='clearfix'></span>
+              </li>
+            )
+          }
 
-
-           
         </ul>
       </div>
     )
   }
+}
+
+List.propTypes = {
+  dizimm:PropTypes.array.isRequired
 }
 
 export default List;
