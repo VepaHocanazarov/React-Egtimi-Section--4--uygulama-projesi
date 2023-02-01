@@ -1,8 +1,6 @@
 
 .ListArea{
 
-    width: 500px;
-    margin: 0 auto;
 
 }
 
@@ -13,6 +11,8 @@ input{
     text-indent: 10px ;
     width: 99%;
 }
+
+
 
 .list li{
     padding: 5px;

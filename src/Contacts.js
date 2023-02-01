@@ -1,6 +1,7 @@
 
 import React, { Component } from 'react'
 import List from './List';
+import Form from './Form';
 
 class Contacts extends Component {
   render() {
@@ -8,6 +9,7 @@ class Contacts extends Component {
       <div>
 
         <List/>
+        <Form/>
         
       </div>
     )
