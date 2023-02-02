@@ -4,6 +4,11 @@ import Contacts from './Contacts';
 
 class App extends Component {
 
+  constructor(props){
+    super(props);
+    this.addContacts= this.addContact.bind(this);
+  }
+
   state = {
     contacts:[{
       name:"Vepa",
@@ -17,12 +22,16 @@ class App extends Component {
   ]
   };
 
+  addContact(){
+
+  }
+
   render()
     {
       return (
         <div className="App">
     
-          <Contacts dizim = {this.state.contacts} />
+          <Contacts addContacts = {this.addContact} dizim = {this.state.contacts} />
     
         </div>
       );
