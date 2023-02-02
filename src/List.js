@@ -4,9 +4,9 @@ import  PropTypes from 'prop-types';
 
 class List extends Component {
 
-  // static propTypes={
-  //   dizim:PropTypes.array.isRequired
-  // }
+  static propTypes={
+    dizim:PropTypes.array.isRequired
+  }
   render() {
     return (
       <div className='ListArea'>
@@ -14,7 +14,7 @@ class List extends Component {
         <ul className='list'>
 
           {
-            this.props.dizimm.map(diziler =>
+            this.props.dizim.map(diziler =>
 
               <li key = {diziler.name} >
                 <span className='name'>{diziler.name}</span>
@@ -30,8 +30,8 @@ class List extends Component {
   }
 }
 
-List.propTypes = {
-  dizimm:PropTypes.array.isRequired
-}
+// List.propTypes = {
+//   dizimm:PropTypes.array.isRequired
+// }
 
 export default List;

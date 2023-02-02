@@ -16,22 +16,28 @@ class Form extends Component {
   onChange(e){
 
     this.setState({
-      
+
      [e.target.name] : e.target.value,
     }
     )
   };
 
   
-  onSubmit(e) {
+  onSubmit(e) 
+  {
    e.preventDefault();
 
-   console.log({...this.state})
+   this.props.addContact(
+    {
+      ...this.state
+    }
+   )
 
    this.setState({
     name:"",
     phone:""
-   })
+
+   });
   }
 
   render() {
